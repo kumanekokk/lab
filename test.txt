@@ -1,3 +1,25 @@
+components:
+  schemas:
+    DeviceIds:
+      description: |
+        デバイスのIDリスト。
+      type: object
+      properties:
+        deviceIds:
+          type: array
+          items:
+            type: string
+            nullable: true      # 空の場合はnullを許可
+            minLength: 1        # 値が入っている場合は1文字以上必須
+          example:
+            - 01JJ61VEZT45DH8A7T1YNVJXKM
+            - ""                 # 空文字（無効）
+            - null               # null（有効）
+
+
+
+
+
 1
 ?
 承認フロー
